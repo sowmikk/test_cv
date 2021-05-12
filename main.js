@@ -1,10 +1,10 @@
 // ----------------------- responsive navbar ------------------------------
 
-const nav_toggle = document.querySelector(".fas");
+const nav_toggle = document.querySelector(".fa");
 
   nav_toggle.addEventListener("click", function () {
   document.querySelector(".navlink").classList.toggle("showNav");
-  document.querySelector(".fas").classList.toggle("fas-rotate");
+  document.querySelector(".fa").classList.toggle("fa-rotate");
   document.querySelector(".body").classList.toggle("body-overflow");
 });
 
