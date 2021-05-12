@@ -37,7 +37,16 @@
 
 
 
+    <script>
+        const toggle = document.querySelector(".fas");
 
+        toggle.addEventListener("click", function () {
+        document.querySelector(".navlink").classList.toggle("showNav");
+        document.querySelector(".fas").classList.toggle("fas-rotate");
+        document.querySelector(".body").classList.toggle("body-overflow");
+        });
+     
+    </script>
     <script src="main.js"></script>
 </body>
 </html>
