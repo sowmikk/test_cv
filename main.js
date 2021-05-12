@@ -20,21 +20,21 @@ if(localStorage.getItem("theme") == null){
 let localData = localStorage.getItem("theme");
 
 if(localData == "light"){
-    dark_icon.src = dark_icon.src = "/icons/moon.png";
+    dark_icon.src = dark_icon.src = "moon.png";
     document.body.classList.remove("dark-theme");
 }
 else if (localData == "dark"){
-    dark_icon.src = dark_icon.src = "/icons/sun.png";
+    dark_icon.src = dark_icon.src = "sun.png";
     document.body.classList.add("dark-theme");
 }
 
 dark_icon.onclick = function() {
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")) {
-        dark_icon.src = "/icons/sun.png"
+        dark_icon.src = "sun.png"
         localStorage.setItem("theme", "dark");
     }else{
-        dark_icon.src = "/icons/moon.png"
+        dark_icon.src = "moon.png"
         localStorage.setItem("theme", "light");
     }
 }
