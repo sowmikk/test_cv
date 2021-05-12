@@ -1,6 +1,12 @@
 // ----------------------- responsive navbar ------------------------------
 
+const nav_toggle = document.querySelector(".fas");
 
+  nav_toggle.addEventListener("click", function () {
+  document.querySelector(".navlink").classList.toggle("showNav");
+  document.querySelector(".fas").classList.toggle("fas-rotate");
+  document.querySelector(".body").classList.toggle("body-overflow");
+});
 
 
 // ----------------------- dark mode ------------------------------
