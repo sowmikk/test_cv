@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* body{
+    background-color: #22272e;
+}
+
+
+
+Background-color = #22272e
+background tirtiry = #2d333b
+White BG color = #fafbfc
+text-color main = #cdd9e5
+text-color = #909dab
+hover-color =  #adbac7 */
+
+:root {
+    --bg-color: #fafbfc;
+    --text-color: #2d333b;
+    --navbar-bg: #fafbfc;
+}
+
+.dark-theme {
+    --bg-color: #22272e;
+    --text-color: #cdd9e5;
+    --navbar-bg: #2d333b;
+}
+
+body {
+    background-color: var(--bg-color);
+    border: 10px solid var(--text-color);
+    height: 100vh;
+}
+
+/* ------------------------ Navbar  Start---------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20%;
+    background-color: var(--navbar-bg);
+}
+
+#dark-icon {
+    width: 25px;
+    cursor: pointer;
+}
+
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    margin: auto 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    color: var(--text-color);
+    padding: 0 10px;
+    transition: 200ms;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+.fas {
+    display: none !important;
+    transition: 0.3s linear;
+}
+
+.fas-rotate {
+    transform: rotate(180deg);
+}
+
+
+nav ul li a:hover {
+    color: #909dab;
+}
+
+@media (max-width: 1080px) {
+
+    .txt-type {
+        height: 100%;
+    }
+
+    header {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 10px 20%;
+        background-color: var(--navbar-bg);
+    }
+
+    nav {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        height: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 25px 0;
+    }
+
+    nav ul {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .showNav {
+        height: 100vh;
+        z-index: 0;
+    }
+
+    .fas {
+        display: block !important;
+        color: var(--text-color);
+    }
+
+    .container {
+        padding: 20vh 11px;
+    }
+
+    .container h1 {
+        width: auto;
+    }
+
+    .body-overflow {
+        overflow: hidden;
+    }
+
+}
+
+/* ------------------------ Navbar  End---------------------------- */
+
+
+/* ------------------------ HomeScreen  Start --------------------------- */
+section {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index-body {
+    border: 5px double gray;
+    max-width: 750px;
+    width: 100%;
+    margin: auto;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.index-text {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--text-color);
+    width: 100%;
+    padding: 20px;
+}
+
+.txt-type > .txt {
+    border-right: 0.2rem solid #777;
+  }
+
+  @media (max-width: 1080px) {
+
+    .index-body {
+        border: 5px double gray;
+        max-width: 350px;
+        width: 100%;
+        margin: auto;
+        height: 45vh;
+    }
+
+    .index-text {
+        font-size: 10px;
+        padding: 10px 8px !important;
+    }
+
+  }
+
+/* ------------------------ HomeScreen  End --------------------------- */
