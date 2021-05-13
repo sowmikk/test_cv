@@ -6,6 +6,7 @@ const nav_toggle = document.querySelector(".fa");
   document.querySelector(".navlink").classList.toggle("showNav");
   document.querySelector(".fa").classList.toggle("fa-rotate");
   document.querySelector(".body").classList.toggle("body-overflow");
+  document.querySelector(".main").classList.toggle("hide");
 });
 
 
@@ -109,3 +110,39 @@ class TypeWriter {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
   }
+
+
+
+
+// ----------------------- contact page ------------------------------
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+
+function blurFunc() {
+  let parent = this.parentNode;
+  if (this.value == "") {
+    parent.classList.remove("focus");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+});
+
+
+// ----------------------- google sheet connection ------------------------------
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxaBu4TA0iev2snejP6RdX0ulbzUIShVgiXSxBs8CJpyae1lQeMfwYecsG5obfuXze0/exec'
+const form = document.forms['google-sheet']
+          
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+  .catch(error => console.error('Error!', error.message))
+})
