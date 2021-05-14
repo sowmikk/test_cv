@@ -67,20 +67,20 @@
                         <span class="circle one"></span>
                         <span class="circle two"></span>
               
-                        <form method="POST" name="google-sheet" action="" autocomplete="off">
+                        <form method="POST" name="google-sheet" action="" autocomplete="off" id="contact_form">
                           <h3 class="title">Send me a mail</h3>
                           <div class="input-container">
-                            <input type="text" name="name" id="exampleInputEmail" class="input" required/>
+                            <input type="text" name="name" class="input" required/>
                             <label for="">Name</label>
                             <span>Name</span>
                           </div>
                           <div class="input-container">
-                            <input type="email" name="email" id="exampleInputEmail"  class="input" required/>
+                            <input type="email" name="email" class="input" required/>
                             <label for="">Email</label>
                             <span>Email</span>
                           </div>
                           <div class="input-container">
-                            <input type="tel" name="phone" id="exampleInputEmail"  class="input" />
+                            <input type="tel" name="phone" class="input" />
                             <label for="">Phone</label>
                             <span>Phone</span>
                           </div>
@@ -93,8 +93,28 @@
                         </form>
                       </div>
                     </div>
+
                   </div>
             </section>
+
+            <div class="backdrop" id="backdrop">
+              <div class="popup">
+                <div class="check-icon">
+                    <i class="fa fa-check"></i>
+                </div>
+                <div class="popup-title">
+                    - Thank you -
+                </div>
+                <div class="popup-description">
+                    Your message has been received. Will get back to you as soon as I'm available :) 
+                </div>
+                <div class="dismiss-btn">
+                    <button id="dismiss-popup-btn">
+                        Dismiss
+                    </button>
+                </div>
+            </div>
+            
         </main>
     </div>    
     
